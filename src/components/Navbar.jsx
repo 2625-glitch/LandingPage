@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import  landingIntro from "../assets/elements-landing2/sq-9.jpg"
 import { Link } from "react-scroll";
 import { FaXmark, FaBars } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
     const [isMenuOpen , setIsMenuOpen] = useState(false);
@@ -26,7 +27,12 @@ const Navbar = () => {
             window.addEventListener('scroll' , handleScroll);
         }
     });
+    const history = useNavigate();
 
+    function handleAccountClick() {
+        console.log('handle click called')
+        history('/dashboard')
+    }
     // navItems Array
     const navItems = [
         {link: 'Demos' , path: "demos"},
@@ -42,14 +48,14 @@ const Navbar = () => {
                 <div className="flex justify-between items-center text-base gap-8">
                     <a href=""><img src="" alt=""/>React</a>
                     {/*Nav Items for larger devices */}
-                    <ul className='md:flex space-x-12 hidden'>
+                    <ul className='md:flex space-x-12 hidden cursor-pointer'>
                         {
                             navItems.map(({link,path}) =>  <Link to={path} spy={true} key={path} smooth={true} offset={-100} className="block text-base font-semibold text-slate-900 hover:bg-gray-100 first:font-medium">{link}</Link>)
                         }
 
                     </ul>
                     {/*My account for larger devices*/}
-                    <div className="space-x-12 hidden lg:flex items-center">
+                    <div className="space-x-12 hidden lg:flex items-center" onClick={handleAccountClick}>
                         <a href="/" className="hidden lg:flex items-center hover:bg-gray-100"> My account</a>
                     </div>
                     {/*Menu icon for mobile devices*/}
@@ -62,7 +68,7 @@ const Navbar = () => {
                     </div>
                 </div>
                 {/*Nav items for mobile devices */}
-                <div className={`space-y-8 px-4 mt-16 py-16 bg-gray-300 ${isMenuOpen ? "block fixed top-0 right-0 left-0": "hidden"}`}>
+                <div className={`space-y-8 px-4 mt-16 py-16 bg-gray-300  ${isMenuOpen ? "block fixed top-0 right-0 left-0": "hidden"}`}>
                 {
                             navItems.map(({link,path}) =>  <Link to={path} spy={true} key={path} smooth={true} offset={-100} className="block text-base font-semibold text-slate-900 hover:bg-gray-100 first:font-medium">{link}</Link>)
                         }
