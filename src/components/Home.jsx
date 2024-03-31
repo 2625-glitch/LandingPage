@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import Works from "./Works/Works";
 import Services from "./Services/Services";
 import Pricing from "./Pricing";
-import Contact from "./Contact";
+import Contact from "./Contact/Contact";
 import CustomerServices from "./CustomerServices/CustomerServices";
 const Home = () => {
   return (
