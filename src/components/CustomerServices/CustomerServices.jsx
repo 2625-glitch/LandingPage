@@ -1,8 +1,9 @@
+/* eslint-disable react/jsx-key */
 import React from "react";
 import CustomerReviewCard from "./CustomerReviewCard";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { responsive } from "../Works/responsiven";
+import { responsive } from "../works/responsiven";
 import { reviews } from "./reviews";
 
 const CustomerServices = () => {

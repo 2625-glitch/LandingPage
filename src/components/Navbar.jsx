@@ -9,7 +9,6 @@ const Navbar = () => {
     const [isMenuOpen , setIsMenuOpen] = useState(false);
     const [isSticky , setIsSticky] = useState(false);
 
-    //set toggle menu
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     }

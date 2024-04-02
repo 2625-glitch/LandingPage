@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Avatar } from "@mui/material";
 const CustomerReviewCard = ({ desc, avatar, name, designation }) => {
   return (

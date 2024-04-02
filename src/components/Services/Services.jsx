@@ -1,7 +1,11 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/jsx-key */
 import ServiceCard from "./ServiceCard";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { responsive } from "../Works/responsiven";
+import { responsive } from "../works/responsiven";
+import { IconButton } from "@mui/material";
+import { ChevronLeft, ChevronRight } from "@mui/icons-material";
 
 const services = [
   {
@@ -30,6 +34,7 @@ const services = [
     img: "https://i.imgur.com/pwpWaWu.jpg",
   },
 ];
+
 const Services = () => {
   const children = services.map((service) => <ServiceCard {...service} />);
   return (
@@ -50,6 +55,16 @@ const Services = () => {
           inventore molestias ab adipisci eius nisi placeat at.
         </p>
       </div>
+      <style>
+        {`
+          .react-multiple-carousel__arrow--left,
+          .react-multiple-carousel__arrow--right {
+            color: white;
+            background-color:  #f2f2f2 ;
+          }
+        `}
+      </style>
+
       <Carousel
         responsive={responsive}
         swipeable={true}
@@ -59,6 +74,7 @@ const Services = () => {
         transitionDuration={1000}
         dotListClass="custom-dot-list-style"
         arrows={true}
+
       >
         {children}
       </Carousel>
