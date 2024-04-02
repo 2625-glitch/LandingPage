@@ -33,6 +33,10 @@ const Navbar = () => {
         console.log('handle click called')
         history('/dashboard')
     }
+    const handleMenuItemClick = (path) => {
+        setIsMenuOpen(false); 
+    }
+
     // navItems Array
     const navItems = [
         {link: 'Demos' , path: "demos"},
@@ -58,22 +62,50 @@ const Navbar = () => {
                     <div className="space-x-12 hidden lg:flex items-center" onClick={handleAccountClick}>
                         <a href="/" className="hidden lg:flex items-center hover:bg-gray-100"> My account</a>
                     </div>
+{/*My account for larger devices*/}
+<div className="space-x-12 hidden lg:flex items-center" onClick={handleAccountClick}>
+                        <a href="/" className="hidden lg:flex items-center hover:bg-gray-100"> My account</a>
+                    </div>
                     {/*Menu icon for mobile devices*/}
-                    <div className="md:hidden">
-                        <button className="focus.:outline-none focus:text-gray-500" onClick={toggleMenu}>
-                        {
-                            isMenuOpen ? (<FaXmark className="h-6 w-6 text-gray-500"/>) : (<FaBars className="h-6 w-6 text-gray-500"/>)
-                        }
+                    <div className="md:hidden relative">
+                        <button
+                            className="focus:outline-none focus:text-white-500"
+                            onClick={toggleMenu}
+                        >
+                            {isMenuOpen ? (
+                                <FaXmark className="h-6 w-6 text-gray-500" />
+                            ) : (
+                                <FaBars className="h-6 w-6 text-gray-500" />
+                            )}
                         </button>
+                        {/*Nav items for mobile devices */}
+                        {isMenuOpen && (
+        <div className="absolute top-0 right-full transform transition-transform duration-300 space-y-8 px-4 mt-2 py-2 bg-gray-300 max-w-xs">
+            {navItems.map(({ link, path }) => (
+                <Link
+                    to={path}
+                    spy={true}
+                    key={path}
+                    smooth={true}
+                    offset={-100}
+                    className="block text-base font-semibold text-slate-900 hover:bg-gray-100 first:font-medium"
+                    onClick={() => handleMenuItemClick(path)}
+                >
+                    {link}
+                </Link>
+            ))}
+            {/* My account for smaller devices */}
+            <div className="block text-base font-semibold text-slate-900 hover:bg-gray-100 first:font-medium" onClick={handleAccountClick}>
+                <a href="/" className="block">My account</a>
+            </div>
+        </div>
+    )}
+
                     </div>
                 </div>
-                {/*Nav items for mobile devices */}
-                <div className={`space-y-8 px-4 mt-16 py-16 bg-gray-300  ${isMenuOpen ? "block fixed top-0 right-0 left-0": "hidden"}`}>
-                {
-                            navItems.map(({link,path}) =>  <Link to={path} spy={true} key={path} smooth={true} offset={-100} className="block text-base font-semibold text-slate-900 hover:bg-gray-100 first:font-medium">{link}</Link>)
-                        }
-                </div>
             </nav>
+
+
         </header>
     );
 };

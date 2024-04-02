@@ -5,9 +5,10 @@ import { useState } from 'react';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import EmailIcon from '@mui/icons-material/Email';
-
-
-
+import PlaceIcon from '@mui/icons-material/Place';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import FacebookIcon from '@mui/icons-material/Facebook';
 const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -133,33 +134,52 @@ const Contact = () => {
     </form>
     </div>
     {/* Footer*/}
-    <div className='md:px-28 px-6 py-16 max-w-screen-2xl mx-auto text-white bg-gray-900 grid grid-cols-1 md:grid-cols-3 gap-y-8'>
-        <div className='h-full px-8 flex flex-col'>
+    <div className='md:px-28 px-6 py-16 max-w-screen-2xl mx-auto text-white grid grid-cols-1 md:grid-cols-3 gap-y-8' style={{backgroundColor: '#212121'}}>
+        <div className='block h-full p-8 flex flex-col shadow-lg'>
         <h4 className="mb-2 relative">About Us</h4>
     <span className="block h-0.5 w-16 bg-yellow-500 mb-4"></span>
 
           <p className='text-sm font-light mb-4'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis perferendis rem, aut aliquam neque nam? dolor sit amet, consectetur adipisicing elit consectetur adipisicing elit. Officiis perferendis rem, aut aliquam.</p>
           <Button size="medium" style={{backgroundColor:'#FE6D01'}} href="#text-buttons" variant="contained" className="w-32">Contact us</Button>
         </div>
-      <div className='flex flex-col'>
+      <div className='block flex flex-col shadow-lg p-8'>
         <h4 className="mb-2 relative">Contact</h4>
           <span className="block h-0.5 w-16 bg-yellow-500 mb-4"></span>
-          <div className="flex items-center">
-        <EmailIcon /> 
+          <div className="flex items-center mb-4">
+        <EmailIcon color='warning' className='mr-2'/> 
         <div className="ml-2">
             <p>Email</p> 
             <p>abc@example.com</p> 
         </div>
     </div>
-
-
-
+    <div className="flex items-center">
+        <PlaceIcon color='warning' className='mr-2' /> 
+        <div className="ml-2">
+            <p>Address</p> 
+            <p>Topoban, Akhalia Sylhet 3114, BD</p> 
+        </div>
+    </div>
       </div>
-        <div className='flex flex-col'>
+
+        <div className='block flex flex-col shadow-lg p-8'>
        <h4 className="mb-2 relative">Desclaimer</h4>
     <span className="block h-0.5 w-16 bg-yellow-500 mb-4"></span>
 
-          <p className='text-sm font-light'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis perferendis rem, aut aliquam neque nam?</p>
+          <p className='text-sm font-light mb-8'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis perferendis rem, aut aliquam neque nam?</p>
+          <div>
+    <div className='flex items-start space-x-4'>
+      <a href="https://www.linkedin.com/">
+      <LinkedInIcon color='#ABABAB' className='h-24 w-24'/>
+      </a>
+      <a href="https://twitter.com/" >
+        <TwitterIcon color='#ABABAB' className='h-24 w-24'/>
+      </a>
+      <a href="https://www.facebook.com/">
+      <FacebookIcon color='#ABABAB' className='h-24 w-24'/>
+      </a>
+    </div>
+  </div>
+
         </div>
       </div>
 
