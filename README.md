@@ -14,7 +14,7 @@ This is a React project for a landing page template. It features a collection of
 1.  Clone the repository to your local machine:
 
     ```bash
-    git clone https://github.com/yourusername/react-landing-page.git
+    git clone git@github.com:2625-glitch/LandingPage.git
     ```
 
 2.  Navigate to the project directory:
