@@ -127,6 +127,8 @@ const Pricing = () => {
       },
     },
   ];
+  const numColumns = window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 4;
+
   return (
     <div className="px-[100px] py-[50px]">
       <div className="md:px-16 py-8">
@@ -135,7 +137,7 @@ const Pricing = () => {
           <Switch checked={switchState} onChange={handleSwitchChange} />
           <p> Get up to 10% discount annually</p>
         </div>
-        <div className="grid grid-cols-4 gap-4 mt-3">
+        <div  className={`grid grid-cols-${numColumns} gap-4 mt-3`}>
           {services.map((service, index) => (
             <PricingCard
               service={service}
