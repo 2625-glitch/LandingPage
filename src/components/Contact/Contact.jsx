@@ -70,7 +70,7 @@ const Contact = () => {
   };
  
   return (
-    <div id='contact'>
+    <div id='contact' style={{backgroundColor:'#F7F7F7'}}>
       <div className='md:px-28 px-6 py-16 max-w-screen-2xl mx-auto'>
         <h2 className='text-2xl font-bold mb-4'>Send Us an Email</h2>
         <p className='py-4'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam, error. </p>
@@ -134,7 +134,7 @@ const Contact = () => {
     </form>
     </div>
     {/* Footer*/}
-    <div className='md:px-28 px-6 py-16 max-w-screen-2xl mx-auto text-white grid grid-cols-1 md:grid-cols-3 gap-y-8' style={{backgroundColor: '#212121'}}>
+    <div className='md:px-28 px-6  max-w-screen-2xl mx-auto text-white grid grid-cols-1 md:grid-cols-3 gap-y-8' style={{backgroundColor: '#212121'}}>
         <div className='block h-full p-8 flex flex-col shadow-lg'>
         <h4 className="mb-2 relative">About Us</h4>
     <span className="block h-0.5 w-16 bg-yellow-500 mb-4"></span>

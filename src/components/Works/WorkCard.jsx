@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import LinkIcon from "@mui/icons-material/Link";
 import ShareIcon from "@mui/icons-material/Share";
@@ -5,7 +6,7 @@ import ShareIcon from "@mui/icons-material/Share";
 const WorkCard = ({ id, image, title, desc }) => {
   return (
     <div
-    className="max-w-xs md:max-w-md lg:max-w-xl mx-auto rounded-md shadow cursor-pointer hover:shadow-lg transition-all duration-300 bg-gray-100"
+    className="max-w-xs md:max-w-md lg:max-w-xs mx-auto rounded-md shadow cursor-pointer hover:shadow-lg transition-all duration-300 bg-gray-100"
       style={{ height: "500px" }}
     >
       <div>

@@ -27,22 +27,22 @@ const Navbar = () => {
             window.addEventListener('scroll' , handleScroll);
         }
     });
-    const history = useNavigate();
+    const navigate = useNavigate();
 
     function handleAccountClick() {
         console.log('handle click called')
-        history('/dashboard')
+        navigate('/dashboard')
     }
     const handleMenuItemClick = (path) => {
         setIsMenuOpen(false); 
-        if (path === '/dashboard') {
-            history(path);
+        if (path === '/demos') {
+            navigate(path);
         } 
     }
 
     // navItems Array
     const navItems = [
-        {link: 'Demos' , path: '/dashboard'},
+        {link: 'Demos' , path: '/demos'},
         {link: 'Home' , path: 'home'},
         {link: 'Works' , path: 'works'},
         {link: 'Service' , path: 'service'},
@@ -57,13 +57,16 @@ const Navbar = () => {
                     {/*Nav Items for larger devices */}
                     <ul className='md:flex space-x-12 hidden cursor-pointer'>
                         {
-                            navItems.map(({link,path}) =>  <Link to={path} spy={true} key={path} smooth={true} offset={-100} className="block text-base font-semibold text-slate-900 hover:bg-gray-100 first:font-medium">{link}</Link>)
+                            navItems.map(({link,path}) =>  <Link to={path} spy={true} key={path} smooth={true} offset={-100} className="block text-base font-semibold text-slate-900 hover:bg-gray-100 first:font-medium"   onClick={() => handleMenuItemClick(path)}
+                            >{link}</Link>)
                         }
 
                     </ul>
                     {/*My account for larger devices*/}
                     <div className="space-x-12 hidden lg:flex items-center" onClick={handleAccountClick}>
-                        <a href="/" className="hidden lg:flex items-center hover:bg-gray-100"><span><PersonIcon/></span> My account</a>
+                    <Link to="/dashboard" className="hidden lg:flex items-center hover:bg-gray-100" onClick={handleAccountClick}>
+             <span><PersonIcon/></span> My account
+                    </Link>
                     </div>
                     {/*Menu icon for mobile devices*/}
                     <div className="md:hidden absolute  rounded-full right-5 top-5">
@@ -95,7 +98,9 @@ const Navbar = () => {
             ))}
             {/* My account for smaller devices */}
             <div className="block text-base font-semibold text-slate-900 hover:bg-gray-100 first:font-medium mt-32" onClick={handleAccountClick}>
-                <a href="/" className="block"><span><PersonIcon/></span>My account</a>
+            <Link to="/dashboard" className="block" onClick={handleAccountClick}>
+             <span><PersonIcon/></span> My account
+                    </Link>
             </div>
         </div>
     )}

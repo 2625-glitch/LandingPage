@@ -4,9 +4,12 @@ const CustomerReviewCard = ({ desc, avatar, name, designation }) => {
   return (
     <div
       className="md:w-[300px] h-full mx-auto rounded-md shadowcursor-pointer
-    hover:shadow-2xl hover:shadow-black transition-all duration-300 bg-white shadow-lg"
-      style={{ height: "300px" }}
+    hover:shadow-2xl hover:shadow-black transition-all duration-300 bg-white shadow-lg border"
+      style={{ height: "350px" }}
     >
+      <div className="flex items-center justify-center mt-4">
+      <Avatar alt={name} src="../../assets/sq-9.jpg" />
+      </div>
       <div
         style={{ height: "200px", overflow: "scroll" }}
         className="flex items-center px-5"

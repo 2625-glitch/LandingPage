@@ -4,7 +4,7 @@ import ServiceCard from "./ServiceCard";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { responsive } from "../Works/responsiven";
-import { IconButton } from "@mui/material";
+import { Button } from "@mui/material";
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
 
 const services = [
@@ -40,14 +40,14 @@ const Services = () => {
   return (
     <div
       id="service"
-      style={{
+      style={{        backgroundColor: "#f7f7f7"}}
+    >
+      <div style={{
         paddingLeft: "100px",
         paddingRight: "100px",
-        paddingTop: "50px",
-        backgroundColor: "#f7f7f7",
-        paddingBottom: "50px",
-      }}
-    >
+        paddingTop: "80px",
+        paddingBottom: '20px'
+      }}>
       <div className="md:px-16 py-8">
         <h2 className="text-2xl font-bold mb-4">Our Services</h2>
         <p>
@@ -78,6 +78,18 @@ const Services = () => {
       >
         {children}
       </Carousel>
+      </div>
+      <div className="mt-20"  style={{backgroundColor:'#2B303B'}}>
+        <div className="pt-20 pb-20 flex justify-start items-center" style={{ paddingLeft: '10rem' }}> 
+          <div className=" "> 
+            <h1 className="text-white  text-2xl font-bold">Dont miss the best management tool of the world</h1>
+            <p className="text-white text-s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nam, illum et quis officiis beatae.</p>
+          </div>
+          <div className="flex items-start" style={{ marginLeft: '14rem' }}>
+          <Button size="large" variant="contained" style={{ backgroundColor: '#FF9103'  }}><span className="text-black text-transform-none lowercase">Start 14 days trial</span></Button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
