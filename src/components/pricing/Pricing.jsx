@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import React, { useState } from "react";
 import Switch from "@mui/material/Switch";
 import PricingCard from "./PricingCard";
@@ -130,7 +131,7 @@ const Pricing = () => {
   const numColumns = window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 4;
 
   return (
-    <div className="px-[100px] py-[50px]">
+    <div className="px-[100px] py-[50px]" id="pricing">
       <div className="md:px-16 py-8">
         <h2 className="text-2xl font-bold mb-4">Our Pricing</h2>
         <div className="flex items-center justify-start ml-[-12px]">

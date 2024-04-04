@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import React from "react";
 import WorkCard from "./WorkCard";
 import classNames from "classnames";

@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
-import Works from "./works/Works";
+import Works from "./works/Works.jsx";
 import Services from "./services/Services";
 import Pricing from "./pricing/Pricing";
 import Contact from "./contact/Contact";

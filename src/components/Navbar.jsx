@@ -35,11 +35,14 @@ const Navbar = () => {
     }
     const handleMenuItemClick = (path) => {
         setIsMenuOpen(false); 
+        if (path === '/dashboard') {
+            history(path);
+        } 
     }
 
     // navItems Array
     const navItems = [
-        {link: 'Demos' , path: "demos"},
+        {link: 'Demos' , path: '/dashboard'},
         {link: 'Home' , path: 'home'},
         {link: 'Works' , path: 'works'},
         {link: 'Service' , path: 'service'},
