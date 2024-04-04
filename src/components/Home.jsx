@@ -1,10 +1,10 @@
 import React from "react";
 import Navbar from "./Navbar";
-import Works from "./works/Works.jsx";
-import Services from "./services/Services";
+import Works from "./Works/Works";
+import Services from "./Services/Services";
 import Pricing from "./pricing/Pricing";
-import Contact from "./contact/Contact";
-import CustomerServices from "./customerServices/CustomerServices";
+import Contact from "./Contact/Contact";
+import CustomerServices from "./CustomerServices/CustomerServices";
 import HomePage from "../pages/HomePage";
 const Home = () => {
   return (

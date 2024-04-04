@@ -3,7 +3,7 @@ import React from "react";
 import CustomerReviewCard from "./CustomerReviewCard";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { responsive } from "../works/responsiven";
+import { responsive } from "../Works/responsiven";
 import { reviews } from "./reviews";
 
 const CustomerServices = () => {

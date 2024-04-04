@@ -3,7 +3,7 @@
 import ServiceCard from "./ServiceCard";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { responsive } from "../works/responsiven";
+import { responsive } from "../Works/responsiven";
 import { IconButton } from "@mui/material";
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
 
