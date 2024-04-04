@@ -1,10 +1,10 @@
-import "./App.css";
+import './App.css';
 
-import Home from "./components/Home";
+import Home from './components/Home';
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Demos from "./pages/Demos";
-import DashBoard from "./pages/DashBoard";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Demos from './pages/Demos';
+import DashBoard from './pages/DashBoard';
 function App() {
   return (
     <div>

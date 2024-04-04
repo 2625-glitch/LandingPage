@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import ParagraphItem from "./ParagraphItem";
-import { Button } from "@mui/material";
+import ParagraphItem from './ParagraphItem';
+import { Button } from '@mui/material';
 
 const PricingCard = ({ service, index, switchState }) => {
   const { role, description, bandwidth, connections, ram, access, user, data } =
@@ -10,11 +10,11 @@ const PricingCard = ({ service, index, switchState }) => {
     <div
       key={index}
       className="max-w-xl md:max-w-md lg:max-w-xl mx-auto rounded-md shadow cursor-pointer hover:shadow-lg transition-all duration-300 bg-gray-100"
-      style={{ height: "450px" , width: '280px' }}
+      style={{ height: '450px', width: '280px' }}
     >
       <div
         className={`flex flex-col items-center justify-center bg-[#F9F9F9] p-3 border-x border-t rounded-t-lg ${
-          index === 1 && "bg-[#3F50B5] text-white"
+          index === 1 && 'bg-[#3F50B5] text-white'
         }`}
       >
         <h3 className="text-base font-medium">{role}</h3>
@@ -22,7 +22,7 @@ const PricingCard = ({ service, index, switchState }) => {
       </div>
       <div className="flex flex-col gap-5 items-center justify-center p-4 border rounded-b-lg">
         <h2 className="text-2xl font-bold">
-          {service.price === "Free"
+          {service.price === 'Free'
             ? service.price
             : !switchState
             ? `$ ${service.price} /Mo`
@@ -41,11 +41,11 @@ const PricingCard = ({ service, index, switchState }) => {
           variant="contained"
           disableRipple
           sx={{
-            backgroundColor: "#FF9100",
-            color: "black",
-            textTransform: "none",
-            "&:hover": {
-              backgroundColor: "#FE6D01",
+            backgroundColor: '#FF9100',
+            color: 'black',
+            textTransform: 'none',
+            '&:hover': {
+              backgroundColor: '#FE6D01',
             },
           }}
         >
