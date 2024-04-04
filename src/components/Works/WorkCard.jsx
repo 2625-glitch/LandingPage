@@ -6,10 +6,10 @@ import ShareIcon from "@mui/icons-material/Share";
 const WorkCard = ({ id, image, title, desc }) => {
   return (
     <div
-    className="max-w-xs md:max-w-md lg:max-w-xs mx-auto rounded-md shadow cursor-pointer hover:shadow-lg transition-all duration-300 bg-gray-100"
+    className="max-w-xs md:max-w-md lg:max-w-xs mx-auto rounded-md shadow cursor-pointer  hover:shadow-md hover:shadow-gray-600 transition-all duration-300 bg-gray-100"
       style={{ height: "500px" }}
     >
-      <div>
+      <div >
         <div className="flex items-center justify-center">
           <img
             src={image}

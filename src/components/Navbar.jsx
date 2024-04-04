@@ -34,7 +34,6 @@ const Navbar = () => {
         navigate('/dashboard')
     }
     const handleMenuItemClick = (path) => {
-        setIsMenuOpen(false); 
         if (path === '/demos') {
             navigate(path);
         } 
@@ -50,8 +49,8 @@ const Navbar = () => {
         {link: 'Contact' , path: 'contact'},
     ];
     return (
-        <header className="w-full bg-white fixed top-0 left-0 right-0 px-20">
-            <nav className={`py-4 lg:px-14 px-16 ${isSticky? "sticky top-0 left-0 right-0 border-b bg-white duration-300": " " }`}>
+        <header className="w-full max-md:bg-black bg-white fixed top-0 left-0 right-0 px-20" >
+            <nav className={`py-4 lg:px-14 px-16 ${isSticky? "sticky top-0 left-0 right-0 border-b max-md:bg-black bg-white duration-300": " " }`}>
                 <div className="flex justify-between items-center text-base gap-8">
                 <img src={ReactLogo} alt="" className="hidden md:block" /> 
                     {/*Nav Items for larger devices */}
@@ -69,7 +68,7 @@ const Navbar = () => {
                     </Link>
                     </div>
                     {/*Menu icon for mobile devices*/}
-                    <div className="md:hidden absolute  rounded-full right-5 top-5">
+                    <div className="md:hidden fixed top-5 right-5 rounded-full bg-white p-3">
                         <button
                             className="focus:outline-none focus:text-white-500" 
                             onClick={toggleMenu}
@@ -80,33 +79,39 @@ const Navbar = () => {
                                 <FaBars className="h-6 w-6 text-gray-500" />
                             )}
                         </button>
-                        {/*Nav items for mobile devices */}
-                        {isMenuOpen && ( 
-                  <div className="absolute top-0 right-0 transform transition-transform duration-300 space-y-8 px-4 mt-4 py-2 bg-gray-300 max-w-6xl">
-            {navItems.map(({ link, path }) => (
-                <Link
-                    to={path}
-                    spy={true}
-                    key={path}
-                    smooth={true}
-                    offset={-100}
-                    className="block text-base font-semibold text-slate-900 hover:bg-gray-100 first:font-medium"
-                    onClick={() => handleMenuItemClick(path)}
-                >
-                    {link}
-                </Link>
-            ))}
-            {/* My account for smaller devices */}
-            <div className="block text-base font-semibold text-slate-900 hover:bg-gray-100 first:font-medium mt-32" onClick={handleAccountClick}>
-            <Link to="/dashboard" className="block" onClick={handleAccountClick}>
-             <span><PersonIcon/></span> My account
-                    </Link>
-            </div>
-        </div>
-    )}
-
                     </div>
-                </div>
+                    {/*Nav items for mobile devices */}
+                        {isMenuOpen && ( 
+                            <div   className="fixed inset-y-0 right-0 bg-white w-64 shadow-lg z-50  transition-transform duration-300 transform translate-x-0 flex flex-col">
+                            <div className="pt-4 px-5  flex flex-row justify-between">
+                            <img src={ReactLogo} alt=""/> 
+                            <FaXmark  onClick={toggleMenu} className="h-6 w-6 text-gray-500" />
+                            </div>
+                            <div  className="py-8 px-5 ">
+                        {navItems.map(({ link, path }) => (
+                            <Link
+                             to={path}
+                             spy={true}
+                             key={path}
+                             smooth={true}
+                            offset={-100}
+                            className="block text-base  font-semibold py-4 hover:bg-gray-100"
+                            onClick={() => handleMenuItemClick(path)}
+                            >
+                             {link}
+                            </Link>
+                        ))}
+                             </div >
+                             <div  className="mt-auto py-8 px-5">
+                                    <div className="text-base font-semibold" onClick={handleAccountClick}>
+                                     <Link to="/dashboard"  onClick={handleAccountClick}>
+                                     <span><PersonIcon/></span> My account
+                                     </Link>
+                                 </div>
+                        </div>
+                        </div>   
+                         )}
+                        </div>
             </nav>
 
 

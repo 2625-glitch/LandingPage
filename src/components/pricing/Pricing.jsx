@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-key */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Switch from "@mui/material/Switch";
 import PricingCard from "./PricingCard";
 
@@ -128,19 +128,18 @@ const Pricing = () => {
       },
     },
   ];
-  const numColumns = window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 4;
-
   return (
-    <div className="px-[100px] py-[50px]" id="pricing">
-      <div className="md:px-16 py-8">
+    <div  id="pricing">
+      <div  className="md:px-28 px-5 py-16 max-w-screen-2xl mx-auto gap-2">
         <h2 className="text-2xl font-bold mb-4">Our Pricing</h2>
         <div className="flex items-center justify-start ml-[-12px]">
           <Switch checked={switchState} onChange={handleSwitchChange} />
           <p> Get up to 10% discount annually</p>
         </div>
-        <div  className={`grid grid-cols-${numColumns} gap-4 mt-3`}>
+        <div className="grid max-md:grid-cols-1 max-sm:grid-cols-1 max-lg:grid-cols-2  max-xl:grid-cols-3 grid-cols-4">
           {services.map((service, index) => (
             <PricingCard
+              key={index} 
               service={service}
               index={index}
               switchState={switchState}
@@ -151,5 +150,6 @@ const Pricing = () => {
     </div>
   );
 };
+
 
 export default Pricing;

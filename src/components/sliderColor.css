@@ -1,0 +1,8 @@
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+
+.slick-arrow:before {
+    color: black;
+}

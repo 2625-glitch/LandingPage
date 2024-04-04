@@ -5,9 +5,9 @@ import landingIntoImage from '../assets/elements-landing2/landing-intro.png';
 import blackBackGroundImage from   '../assets/elements-landing2/black-background.jpeg';
 const HomePage = () => {
   return (
-    <div className="mt-20" >
-      <div className="px-0 lg:px-14 max-w-screen-2xl mx-auto  py-16"  style={{backgroundImage: `url(${blackBackGroundImage}`,backgroundSize: 'auto'}}>
-        <div className='text-center'>
+    <div className="" >
+      <div className="px-0 lg:px-14 max-w-screen-2xl mx-auto  py-16 "  style={{backgroundImage: `url(${blackBackGroundImage}`,backgroundSize: 'auto'}}>
+        <div className='text-center mt-16'>
         <p className="text-2xl mb-6" style={{ color: '#FF9103' }}>
           Build More; Sell More;
         </p>

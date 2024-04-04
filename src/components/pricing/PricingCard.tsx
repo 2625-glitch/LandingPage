@@ -9,7 +9,8 @@ const PricingCard = ({ service, index, switchState }) => {
   return (
     <div
       key={index}
-      className="col-span-1 hover:shadow-xl  transition-all duration-300 bg-white shadow-md"
+      className="max-w-xl md:max-w-md lg:max-w-xl mx-auto rounded-md shadow cursor-pointer hover:shadow-lg transition-all duration-300 bg-gray-100"
+      style={{ height: "450px" , width: '280px' }}
     >
       <div
         className={`flex flex-col items-center justify-center bg-[#F9F9F9] p-3 border-x border-t rounded-t-lg ${
@@ -44,7 +45,7 @@ const PricingCard = ({ service, index, switchState }) => {
             color: "black",
             textTransform: "none",
             "&:hover": {
-              backgroundColor: "#FE6D01", // New background color on hover
+              backgroundColor: "#FE6D01",
             },
           }}
         >

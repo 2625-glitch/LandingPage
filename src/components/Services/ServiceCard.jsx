@@ -4,7 +4,7 @@ const ServiceCard = ({ title, desc }) => {
   return (
     <div
       className="card md:w-[350px] h-full mx-auto rounded-md shadowcursor-pointer
-  hover:shadow-2xl hover:shadow-black transition-all duration-300 bg-white shadow-lg"
+  hover:shadow-xl hover:shadow-gray-600 transition-all duration-300 bg-white shadow-lg"
     >
       <div className="flex items-center justify-center p-5">
         <SettingsSuggestIcon style={{ height: "60px", width: "70px" }} />,
