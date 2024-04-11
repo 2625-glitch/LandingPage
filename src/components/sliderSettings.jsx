@@ -9,9 +9,9 @@ export const commonSliderSettings = {
   autoplay: true,
   responsive: [
     {
-      breakpoint: 1024,
+      breakpoint: 1050,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 2,
         slidesToScroll: 1,
         infinite: true,
         dots: true,
@@ -35,7 +35,7 @@ export const commonSliderSettings = {
   ],
   appendDots: (dots) => (
     <div>
-      <div style={{ margin: '0px' }}> {dots}</div>
+      <div style={{ margin: "0px" }}> {dots}</div>
     </div>
   ),
 };
