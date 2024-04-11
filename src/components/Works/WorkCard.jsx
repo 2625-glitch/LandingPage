@@ -5,7 +5,7 @@ import ShareIcon from "@mui/icons-material/Share";
 
 const WorkCard = ({ id, image, title, desc }) => {
   return (
-    <div className="rounded-md shadow cursor-pointer  hover:shadow-md hover:shadow-gray-600 transition-all duration-300 bg-gray-100 sm:w-[300px] h-auto">
+    <div className="rounded-md shadow cursor-pointer  hover:shadow-md hover:shadow-gray-600 transition-all duration-300 bg-gray-100 h-auto m-[30px]">
       <div className="flex items-center justify-center">
         <img
           src={image}

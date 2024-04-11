@@ -130,10 +130,12 @@ const Pricing = () => {
   ];
   return (
     <div id="pricing">
-      <h2 className="text-2xl font-bold mb-4">Our Pricing</h2>
-      <div className="flex items-center justify-start">
-        <Switch checked={switchState} onChange={handleSwitchChange} />
-        <p> Get up to 10% discount annually</p>
+      <div className="px-4 md:px-16 py-8">
+        <h2 className="text-2xl font-bold mb-4">Our Pricing</h2>
+        <div className="flex items-center justify-start">
+          <Switch checked={switchState} onChange={handleSwitchChange} />
+          <p> Get up to 10% discount annually</p>
+        </div>
       </div>
       <div className="grid max-md:grid-cols-2 max-sm:grid-cols-1 max-lg:grid-cols-2 grid-cols-4">
         {services.map((service, index) => (

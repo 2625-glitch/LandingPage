@@ -82,7 +82,10 @@ const Services = () => {
         className="md:px-28 px-4  max-w-screen-2xl mx-auto "
         style={{ backgroundColor: "#2B303B" }}
       >
-        <div className="px-[20px] py-[30px] flex flex-col lg:flex-row justify-start items-center">
+        <div
+          className="flex flex-col lg:flex-row justify-between items-center"
+          style={{ padding: "50px" }}
+        >
           <div className="mb-6 lg:mb-0">
             <h1 className="text-white text-2xl lg:text-3xl font-bold mb-4">
               Dont miss the best management tool of the world
