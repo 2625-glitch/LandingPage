@@ -1,22 +1,18 @@
 /* eslint-disable react/prop-types */
-import { Avatar } from '@mui/material';
+import { Avatar } from "@mui/material";
 const CustomerReviewCard = ({ desc, avatar, name, designation }) => {
   return (
     <div
-      className="md:w-[300px] h-full mx-auto rounded-md shadowcursor-pointer
-    hover:shadow-2xl hover:shadow-black transition-all duration-300 bg-white shadow-lg border"
-      style={{ height: '350px' }}
+      className=" h-[300px] rounded-md shadowcursor-pointer
+    hover:shadow-xl hover:shadow-gray transition-all duration-300 bg-white shadow-lg border p-[30px] m-[10px]"
     >
-      <div className="flex items-center justify-center mt-4">
-        <Avatar alt={name} src="../../assets/sq-9.jpg" />
-      </div>
       <div
-        style={{ height: '200px', overflow: 'scroll' }}
-        className="flex items-center px-5"
+        style={{ overflow: "scroll" }}
+        className="flex items-center h-[200px]"
       >
         <h5>{desc}</h5>
       </div>
-      <div className="flex flex-row justify-space px-5">
+      <div className="flex flex-row justify-space ">
         <div>
           <Avatar alt={name} src="../../assets/sq-9.jpg" />
         </div>

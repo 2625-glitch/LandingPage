@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import landingIntro from '../assets/elements-landing2/sq-9.jpg';
-import { Link } from 'react-scroll';
-import { FaXmark, FaBars } from 'react-icons/fa6';
-import { useNavigate } from 'react-router-dom';
-import ReactLogo from '../assets/react.svg';
-import PersonIcon from '@mui/icons-material/Person';
+import React, { useEffect, useState } from "react";
+import landingIntro from "../assets/elements-landing2/sq-9.jpg";
+import { Link } from "react-scroll";
+import { FaXmark, FaBars } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
+import ReactLogo from "../assets/react.svg";
+import PersonIcon from "@mui/icons-material/Person";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
@@ -21,45 +21,44 @@ const Navbar = () => {
         setIsSticky(false);
       }
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.addEventListener('scroll', handleScroll);
+      window.addEventListener("scroll", handleScroll);
     };
   });
   const navigate = useNavigate();
 
   function handleAccountClick() {
-    console.log('handle click called');
-    navigate('/dashboard');
+    console.log("handle click called");
+    navigate("/dashboard");
   }
   const handleMenuItemClick = (path) => {
-    if (path === '/demos') {
+    if (path === "/demos") {
       navigate(path);
     }
   };
 
   // navItems Array
   const navItems = [
-    { link: 'Demos', path: '/demos' },
-    { link: 'Home', path: 'home' },
-    { link: 'Works', path: 'works' },
-    { link: 'Service', path: 'service' },
-    { link: 'Pricing', path: 'pricing' },
-    { link: 'Contact', path: 'contact' },
+    { link: "Demos", path: "/demos" },
+    { link: "Home", path: "home" },
+    { link: "Works", path: "works" },
+    { link: "Service", path: "service" },
+    { link: "Pricing", path: "pricing" },
+    { link: "Contact", path: "contact" },
   ];
   return (
-    <header className="w-full max-md:bg-gray-900 bg-white fixed top-0 left-0 right-0 px-20">
+    <header className="w-full bg-white max-md:bg-transparent max-lg:bg-transparent fixed top-0 left-0 right-0  ">
       <nav
         className={`py-4 lg:px-14 px-16 ${
           isSticky
-            ? 'sticky top-0 left-0 right-0 border-b max-md:bg-black bg-white duration-300'
-            : ' '
+            ? "sticky top-0 left-0 right-0  bg-white duration-300 max-md:bg-transparent max-lg:bg-transparent"
+            : " "
         }`}
       >
-        <div className="flex justify-between items-center text-base gap-8">
-          <img src={ReactLogo} alt="" className="hidden md:block" />
-          {/*Nav Items for larger devices */}
-          <ul className="md:flex space-x-12 hidden cursor-pointer">
+        <div className="flex  items-center justify-around text-base gap-8 ">
+          <ul className="lg:flex space-x-12  hidden cursor-pointer">
+            <img src={ReactLogo} alt="" className="" />
             {navItems.map(({ link, path }) => (
               <Link
                 to={path}
@@ -74,9 +73,8 @@ const Navbar = () => {
               </Link>
             ))}
           </ul>
-          {/*My account for larger devices*/}
           <div
-            className="space-x-12 hidden lg:flex items-center"
+            className="hidden lg:flex items-center"
             onClick={handleAccountClick}
           >
             <Link
@@ -86,12 +84,11 @@ const Navbar = () => {
             >
               <span>
                 <PersonIcon />
-              </span>{' '}
+              </span>{" "}
               My account
             </Link>
           </div>
-          {/*Menu icon for mobile devices*/}
-          <div className="md:hidden fixed top-5 right-5 rounded-full bg-white p-3">
+          <div className="lg:hidden fixed top-5 right-5 rounded-full bg-white p-3">
             <button
               className="focus:outline-none focus:text-white-500"
               onClick={toggleMenu}
@@ -136,7 +133,7 @@ const Navbar = () => {
                   <Link to="/dashboard" onClick={handleAccountClick}>
                     <span>
                       <PersonIcon />
-                    </span>{' '}
+                    </span>{" "}
                     My account
                   </Link>
                 </div>
