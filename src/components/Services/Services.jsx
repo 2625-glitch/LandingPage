@@ -1,38 +1,35 @@
 /* eslint-disable react/prop-types */
-/* eslint-disable react/jsx-key */
-import ServiceCard from "./ServiceCard";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-import { Button } from "@mui/material";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { commonSliderSettings } from "../sliderSettings";
+import ServiceCard from './ServiceCard';
+import { Button } from '@mui/material';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { commonSliderSettings } from '../sliderSettings';
 const services = [
   {
-    title: "Computer Administration",
-    desc: "  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat unde inventore molestias ab adipisci eius nisi placeat at.",
-    img: "",
+    title: 'Computer Administration',
+    desc: '  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat unde inventore molestias ab adipisci eius nisi placeat at.',
+    img: '',
   },
   {
-    title: "Database Management",
-    desc: "  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat unde inventore molestias ab adipisci eius nisi placeat at.",
-    img: "https://i.imgur.com/pwpWaWu.jpg",
+    title: 'Database Management',
+    desc: '  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat unde inventore molestias ab adipisci eius nisi placeat at.',
+    img: 'https://i.imgur.com/pwpWaWu.jpg',
   },
   {
-    title: "Postgress Migrations",
-    desc: "  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat unde inventore molestias ab adipisci eius nisi placeat at.",
-    img: "https://i.imgur.com/pwpWaWu.jpg",
+    title: 'Postgress Migrations',
+    desc: '  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat unde inventore molestias ab adipisci eius nisi placeat at.',
+    img: 'https://i.imgur.com/pwpWaWu.jpg',
   },
   {
-    title: "Opensource code writing",
-    desc: "  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat unde inventore molestias ab adipisci eius nisi placeat at.",
-    img: "https://i.imgur.com/pwpWaWu.jpg",
+    title: 'Opensource code writing',
+    desc: '  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat unde inventore molestias ab adipisci eius nisi placeat at.',
+    img: 'https://i.imgur.com/pwpWaWu.jpg',
   },
   {
-    title: "Database Administration",
-    desc: "  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat unde inventore molestias ab adipisci eius nisi placeat at.",
-    img: "https://i.imgur.com/pwpWaWu.jpg",
+    title: 'Database Administration',
+    desc: '  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat unde inventore molestias ab adipisci eius nisi placeat at.',
+    img: 'https://i.imgur.com/pwpWaWu.jpg',
   },
 ];
 
@@ -62,11 +59,13 @@ var settings = {
   nextArrow: <CustomNextArrow />,
 };
 const Services = () => {
-  const children = services.map((service) => <ServiceCard {...service} />);
+  const children = services.map((service, index) => (
+    <ServiceCard key={index} {...service} />
+  ));
   return (
-    <div id="service" style={{ backgroundColor: "#f7f7f7" }}>
-      <div className="px-4 md:px-16 py-8" style={{}}>
-        <div className="md:px-16">
+    <div id="service" style={{ backgroundColor: '#f7f7f7' }}>
+      <div className="px-4 md:px-28 py-8">
+        <div className="md:px-6 py-8">
           <h2 className="text-xl font-bold mb-4">Our Services</h2>
           <p className="text-sm text-gray-600 font-light">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
@@ -80,11 +79,11 @@ const Services = () => {
       </div>
       <div
         className="md:px-28 px-4  max-w-screen-2xl mx-auto "
-        style={{ backgroundColor: "#2B303B" }}
+        style={{ backgroundColor: '#2B303B' }}
       >
         <div
           className="flex flex-col lg:flex-row justify-between items-center"
-          style={{ padding: "50px" }}
+          style={{ padding: '50px' }}
         >
           <div className="mb-6 lg:mb-0">
             <h1 className="text-white text-2xl lg:text-3xl font-bold mb-4">
@@ -100,7 +99,7 @@ const Services = () => {
               size="large"
               variant="contained"
               className="text-black"
-              style={{ backgroundColor: "#FF9103", width: "200px" }}
+              style={{ backgroundColor: '#FF9103', width: '200px' }}
             >
               <span className="text-black font-semi-bold lowercase">
                 Start 14 days trial

@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-key */
-import React, { useState, useEffect } from "react";
-import Switch from "@mui/material/Switch";
-import PricingCard from "./PricingCard";
+import React, { useState, useEffect } from 'react';
+import Switch from '@mui/material/Switch';
+import PricingCard from './PricingCard';
 
 const Pricing = () => {
   const [switchState, setSwitchState] = useState(false);
@@ -12,126 +12,126 @@ const Pricing = () => {
 
   const services = [
     {
-      role: "Devoloper",
-      description: "For New Developer",
-      price: "Free",
+      role: 'Devoloper',
+      description: 'For New Developer',
+      price: 'Free',
       bandwidth: {
-        info: "10 GB of bandwidth",
+        info: '10 GB of bandwidth',
         isActive: true,
       },
       connections: {
-        info: "Max 50 connections",
+        info: 'Max 50 connections',
         isActive: true,
       },
       ram: {
-        info: "512MB RAM",
+        info: '512MB RAM',
         isActive: true,
       },
       access: {
-        info: "Unlimited Access",
+        info: 'Unlimited Access',
         isActive: false,
       },
       user: {
-        info: "Unlimited User",
+        info: 'Unlimited User',
         isActive: false,
       },
       data: {
-        info: "Data Analytics",
+        info: 'Data Analytics',
         isActive: false,
       },
     },
     {
-      role: "Starter",
-      description: "For Professional Developer",
-      price: "30",
+      role: 'Starter',
+      description: 'For Professional Developer',
+      price: '30',
       bandwidth: {
-        info: "10 GB of bandwidth",
+        info: '10 GB of bandwidth',
         isActive: true,
       },
       connections: {
-        info: "Max 50 connections",
+        info: 'Max 50 connections',
         isActive: true,
       },
       ram: {
-        info: "512MB RAM",
+        info: '512MB RAM',
         isActive: true,
       },
       access: {
-        info: "Unlimited Access",
+        info: 'Unlimited Access',
         isActive: true,
       },
       user: {
-        info: "Unlimited User",
+        info: 'Unlimited User',
         isActive: false,
       },
       data: {
-        info: "Data Analytics",
+        info: 'Data Analytics',
         isActive: false,
       },
     },
     {
-      role: "Business",
-      description: "For Small Business",
-      price: "60",
+      role: 'Business',
+      description: 'For Small Business',
+      price: '60',
       bandwidth: {
-        info: "10 GB of bandwidth",
+        info: '10 GB of bandwidth',
         isActive: true,
       },
       connections: {
-        info: "Max 50 connections",
+        info: 'Max 50 connections',
         isActive: true,
       },
       ram: {
-        info: "512MB RAM",
+        info: '512MB RAM',
         isActive: true,
       },
       access: {
-        info: "Unlimited Access",
+        info: 'Unlimited Access',
         isActive: true,
       },
       user: {
-        info: "Unlimited User",
+        info: 'Unlimited User',
         isActive: true,
       },
       data: {
-        info: "Data Analytics",
+        info: 'Data Analytics',
         isActive: false,
       },
     },
     {
-      role: "Enterprise",
-      description: "For Large Companies",
-      price: "160",
+      role: 'Enterprise',
+      description: 'For Large Companies',
+      price: '160',
       bandwidth: {
-        info: "10 GB of bandwidth",
+        info: '10 GB of bandwidth',
         isActive: true,
       },
       connections: {
-        info: "Max 50 connections",
+        info: 'Max 50 connections',
         isActive: true,
       },
       ram: {
-        info: "512MB RAM",
+        info: '512MB RAM',
         isActive: true,
       },
       access: {
-        info: "Unlimited Access",
+        info: 'Unlimited Access',
         isActive: false,
       },
       user: {
-        info: "Unlimited User",
+        info: 'Unlimited User',
         isActive: false,
       },
       data: {
-        info: "Data Analytics",
+        info: 'Data Analytics',
         isActive: false,
       },
     },
   ];
   return (
-    <div id="pricing">
-      <div className="px-4 md:px-16 py-8">
-        <h2 className="text-2xl font-bold mb-4">Our Pricing</h2>
+    <div id="pricing" className="px-4 md:px-28 py-8">
+      <div className="md:px-2 py-8">
+        <h2 className="text-2xl font-bold mb-4">Choose a Plan</h2>
         <div className="flex items-center justify-start">
           <Switch checked={switchState} onChange={handleSwitchChange} />
           <p> Get up to 10% discount annually</p>

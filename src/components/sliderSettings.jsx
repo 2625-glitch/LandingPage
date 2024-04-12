@@ -35,7 +35,7 @@ export const commonSliderSettings = {
   ],
   appendDots: (dots) => (
     <div>
-      <div style={{ margin: "0px" }}> {dots}</div>
+      <div style={{ margin: '0px', color: 'red' }}> {dots}</div>
     </div>
   ),
 };

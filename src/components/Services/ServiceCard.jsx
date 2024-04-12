@@ -1,14 +1,14 @@
 /* eslint-disable react/prop-types */
-import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
-import "./service.css";
+import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
+import './service.css';
 const ServiceCard = ({ title, desc }) => {
   return (
     <div
-      className=" card h-[300px] md:w-[350px] rounded-md shadowcursor-pointer
-   transition-all duration-300 bg-white shadow-lg p-[30px] m-[20px]"
+      className=" card h-[300px] rounded-md shadowcursor-pointer
+   transition-all duration-300 bg-white shadow-lg m-[30px]"
     >
       <div className="flex items-center justify-center">
-        <SettingsSuggestIcon style={{ height: "60px", width: "70px" }} />,
+        <SettingsSuggestIcon style={{ height: '60px', width: '70px' }} />,
       </div>
       <div className="flex flex-col h-[200px] justify-between">
         <div className="py-2">
